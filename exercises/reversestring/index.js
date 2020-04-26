@@ -15,7 +15,7 @@ function reverse (str) {
   const len = s.length
 
   if (len === 1) {
-    return s
+    return s[0]
   }
 
   return s[len - 1] + reverse(s.slice(0, len - 1).join(''))
