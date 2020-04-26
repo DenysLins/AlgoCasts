@@ -11,14 +11,21 @@ function reverse (str) {
   // return str.split('').reverse().join("")
 
   // SOLUTION 2
-  const s = str.split('')
-  const len = s.length
+  // const arr = str.split('')
+  // const len = arr.length
 
-  if (len === 1) {
-    return s[0]
+  // if (len === 1) {
+  //   return arr[0]
+  // }
+
+  // return arr[len - 1] + reverse(arr.slice(0, len - 1).join(''))
+
+  // SOLUTION 3
+  let result = ''
+  for (let i = str.length - 1; i >= 0; i--) {
+    result += str[i]
   }
-
-  return s[len - 1] + reverse(s.slice(0, len - 1).join(''))
+  return result
 }
 
 module.exports = reverse
