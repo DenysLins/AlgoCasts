@@ -31,3 +31,23 @@ test('"Fish hsif" is not a palindrome', () => {
 test('"pennep" a palindrome', () => {
   expect(palindrome('pennep')).toBeTruthy()
 })
+
+test('"p" a palindrome', () => {
+  expect(palindrome('p')).toBeTruthy()
+})
+
+test('"" a palindrome', () => {
+  expect(palindrome('')).toBeTruthy()
+})
+
+test('" !" a palindrome', () => {
+  expect(palindrome(' !')).toBeFalsy()
+})
+
+test('"! !" a palindrome', () => {
+  expect(palindrome('! !')).toBeTruthy()
+})
+
+test('"animal sense kayak esnes lamina" a palindrome', () => {
+  expect(palindrome('animal sense kayak esnes lamina')).toBeTruthy()
+})
