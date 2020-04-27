@@ -21,11 +21,21 @@ function reverse (str) {
   // return arr[len - 1] + reverse(arr.slice(0, len - 1).join(''))
 
   // SOLUTION 3
-  let result = ''
-  for (let i = str.length - 1; i >= 0; i--) {
-    result += str[i]
-  }
-  return result
+  // let result = ''
+  // for (let i = str.length - 1; i >= 0; i--) {
+  //   result += str[i]
+  // }
+  // return result
+
+  // SOLUTION 4
+  // let result = ''
+  // for (const c of str) {
+  //   result = c + result
+  // }
+  // return result
+
+  // SOLUTION 5
+  return str.split('').reduce((reversed, character) => character + reversed, '')
 }
 
 module.exports = reverse
